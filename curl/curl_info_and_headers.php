@@ -1,0 +1,9 @@
+<?php
+//$ch=curl_init("https://images.unsplash.com/photo-1623038868323-7d39ec58eefe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
+$ch=curl_init("https://wppool.dev/");
+curl_setopt($ch,CURLOPT_VERBOSE,1);
+curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+$result=curl_exec($ch);
+$info=curl_getinfo($ch);
+$headers=get_headers("https://wppool.dev/");
+print_r($headers);
